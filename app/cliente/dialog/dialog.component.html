@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{ cliente != null ? 'Editar Usuario' : 'Nuevo Usuario' }}</h1>
+<div mat-dialog-content> 
+    <mat-form-field>
+        <mat-label> Nombre {{ nombre }} {{ cliente.id }}</mat-label>
+        
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="warm" (click)="close();">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="cliente!=null ? addCliente() : edithCliente()">Guardar</button>
+</div>
